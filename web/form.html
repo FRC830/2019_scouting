@@ -29,15 +29,15 @@
     <h3>Auton</h3>
     <div class="row">
       <div class="col-md-6 col-xs-12">
+        {{form.hab_start_robot}}
+      </div>
+      <div class="col-md-6 col-xs-12">
+        {{form.auton_cross_line}}
       </div>
     </div>
-    <div class="row form-group">
-      {{ form.auton_cube_count }}
+    <div class= "row">
+      {{form.auton_ci_ball_cargo}}
     </div>
-    <div class="row">
-      {{ form.cross_line }}
-      {{ form.auton_ci_switch }}
-      {{ form.auton_ci_scale }}
   </div>
   <div class="game-period">
     <h3>Teleop</h3>
@@ -45,48 +45,14 @@
     <div class="row">
       {{form.cube_count}}
     </div>
-    <div class="row">
-      {{ form.cube_switch }}
-     </div>
-    <div class="row">
-      {{ form.cube_scale }}
-      {{ form.fouls }}
-    </div>
-    <div class="row">
-      {{ form.cube_vault }}
-       {{ form.tech_fouls }}
-    </div>
-    <br>
-    <br>
-    <div class="row">
-    </div>
-    <div class="row form-group">
-    </div>
-    <div class="row">
-      <div class="col-md-10 col-xs-12">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-10 col-xs-12">
-      </div>
-    </div>
   </div>
   <div class="game-period">
     <h3>End Game</h3>
-  </div>
-  <div class="row">
-    {{ form.endgame_action }}
-  </div>
-  <div class="row">
-    {{ form.helping_robot}}
+
   </div>
   <div class="row">
     <div class="col-md-3 col-xs-12">
       <h3>Comments</h3>
-    </div>
-  </div>
-  <div class="row form-group">
-    <div class="col-md-8 col-xs-12">
       {{ form.comments(rows='5') }}
     </div>
   </div>

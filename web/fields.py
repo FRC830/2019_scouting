@@ -15,11 +15,15 @@ class Form(flask_wtf.Form):
     match_id = IntegerField('Match ID', buttons=False)
     team_id = IntegerField('Team ID', buttons=False)
 
-    #SandStorm
+    # Sandstorm
 
     hab_start_robot = RadioField('What Habitat did the robot start in?', 
-        choices =[('0', 'Base'), ('1', 'Left 2nd Level'), ('2', 'Right 2nd Level'), ('3', 'Top Level')], default="0")
+        choices =[('0', 'Base'), ('1', 'Left 2nd Level'), \
+        ('2', 'Right 2nd Level'), ('3', 'Top Level')], default="0")
     auton_cross_line = CheckboxButtonField('Did the Robot cross the line?')
+
+    auton_ci_pick_ball_cargo = BallField('Pre-game Picked Ball In Cargo')
+    auton_ci_pick_hatch_cargo = HatchField('Pre-game Picke Hatch On Cargo')  
 
     auton_ci_ball_cargo = BallField('Placed Ball In Cargo')
     auton_ci_hatch_cargo = HatchField('Placed Hatch On Cargo')
@@ -33,12 +37,11 @@ class Form(flask_wtf.Form):
     auton_ci_hatch_rock_3 = IntegerField('Hatch Rocket Level 3', default=0, col_sm=8)
 
 
-    auton_ball_count = IntegerField('Balls picked up', default=0,
-        col_sm=6)
+    auton_ball_count = IntegerField('Balls picked up', default=0, col_sm=6)
     
-    #Teleop
-    ball_count = IntegerField('Balls picked up', default=0,
-        col_sm=6)
+    # Teleop
+    ball_count = IntegerField('Balls picked up', default=0, col_sm=6)
+
     ball_cargo = IntegerField('Ball In Cargo', default=0, col_sm=6)
     hatch_cargo = IntegerField('Hatch In Cargo', default=0, col_sm=6)
 
@@ -68,9 +71,11 @@ class Form(flask_wtf.Form):
 
 
     hab_end_robot = RadioField('What Habitat did the robot end in?', 
-        choices =[('0', 'Base'), ('1', 'Left 2nd Level'), ('2', 'Right 2nd Level'), ('3', 'Top Level'), ('4', 'Did not enter habitat')], default="4")
+        choices =[('0', 'Base'), ('1', 'Left 2nd Level'), ('2', 'Right 2nd Level'), \
+        ('3', 'Top Level'), ('4', 'Did not enter habitat')], default="4")
 
-    mechanism_scr = RadioField('What mechanism did they use to interact meaningfully with the ball? How fast was said mechanism?', 
+    mechanism_scr = RadioField('What mechanism did they use to interact meaningfully with the ball? \
+How fast was said mechanism?', 
         choices=[('0', 'Shooter'), ('1', 'Elevator'), ('2', 'Other')], default="2")
 
     comments_mechanism = TextAreaField('', col_lg=12)

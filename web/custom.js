@@ -17,6 +17,8 @@ $(function () {
             $('img:nth(0)').attr('src', '/static/custom/watergame.png')
         } else if (comment.indexOf("swerve") != -1) {
             $('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
+        } else if (comment.indexOf("to the moon")!= -1){
+            $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
         } else if (comment.indexOf("deactivate") != -1 || comment.indexOf("disable") != -1) {
             alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
         } else if (comments.indexOf("Doctor Disco") != -1) {
@@ -27,8 +29,8 @@ $(function () {
             alert("I know who you are, Peter Quill")
         } else if (comment.indexOf("Infinity") != -1) {
             alert("Robots. Robots Everywhere")
-        } else if (comment.indexOf("TO THE MOON")!= -1){
-            $('img:nth(0)').attr('src','/static/custom/MOON.jpg')
+        } else if (comment.indexOf("to the moon")!= -1){
+            $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
         }
 
     })

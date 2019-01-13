@@ -1,119 +1,168 @@
-$(function() {
-	$('#comments').keyup(function(){
+$(function () {
+    $('#comments').keyup(function () {
         /* comment based parsing*/
-		if ($('#comments').val().toLowerCase().indexOf("rainbow") != -1) {
-			$('.content').css('background','linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
-		}
-		else {
-			$('.content').css('background','white');
-		}
+        var comment = $('#comments').val().toLowerCase();
+        if (comment.indexOf("rainbow") != -1) {
+            $('.content').css('background', 'linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
+        } else {
+            $('.content').css('background', 'white');
+        }
+        if (comment.indexOf("fire") != -1) {
+            alert("Dexter, is that you?");
+        } else if (comment.indexOf("wood") != -1) {
+            alert("I am Groot");
+        } else if (comment.indexOf("jerry") != -1) {
+            $('img:nth(0)').attr('src', '/static/custom/Jerry.gif')
+        } else if (comment.indexOf("water game") != -1) {
+            $('img:nth(0)').attr('src', '/static/custom/watergame.png')
+        } else if (comment.indexOf("swerve") != -1) {
+            $('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
+        } else if (comment.indexOf("deactivate") != -1 || comment.indexOf("disable") != -1) {
+            alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
+        } else if (comments.indexOf("Doctor Disco") != -1) {
+            alert("Achievement Get: \n I'm a robot, not a doctor \n()");
+        }
+    })
+}) 
 
-		if ($('#comments').val().toLowerCase().indexOf("stop it") != -1){
-			$('img:nth(0)').attr('src', '/static/custom/stopit.gif')
-		}		
-		else if ($('#comments').val().toLowerCase().indexOf("jerry") != -1){
-			$('img:nth(0)').attr('src', '/static/custom/Jerry.gif')
-		}
-		else if ($('#comments').val().toLowerCase().indexOf("water game") != -1){
-			$('img:nth(0)').attr('src', '/static/custom/watergame.png')
-		}
-		else if ($('#comments').val().toLowerCase().indexOf("swerve") != -1){
-			$('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
-		}
-		else if ($('#comments').val().toLowerCase().indexOf("up up down down left right left right b a start") != -1){
-			$('img:nth(0)').attr('src','/static/custom/Donkey_Kong.png')
-            alert("SUPER ACHIEVEMENT GET: \nHacker! \n(Discover the cheat code!)");
-		}
-		else {
-             alert("SUPER ACHIEVEMENT GET: \nHacker! \n(Discover the cheat code!)");
-			$('img:nth(0)').attr('src', '/static/custom/known.png')
-		}
-	})
+$("#team_id").keyup(function () {
+    if ($(this).val() == 8675309) {
+        alert("Achievement Get: \nI got your number, Jenny.\n(Have a fake number!)");
+    };
 })
+// fades screen in/out after a certain # of toggles
 var count = 0;
-$(function() {
-
-	$("#team_id").keyup(function() {
-		if($(this).val() == 8675309){
-			alert("Achievement Get: \nI got your number, Jenny.\n(Have a fake number!)");
-        };
-	})
-    $("#auton_ci_switch").change(function(){
-        count++;
-        if (count >= 3){
-            $(".form-field").fadeOut(2000).fadeIn(2000);
-        }
-        var comments = $("#comments").val();
-		if(comments.length > 110){
-			alert("Achievement Get: \nReady Player One.\nCongratulations on finishing your novel, \"Comments\".");
-		}
-		
-        var match = $("#match_id").val();
-        if (match == 1){
-            alert("Achievement Get: \nWe are Number One! \n(scout the first match)");
-        }
-		else if (match == 80){
-			alert("Achievement Get: \nOur Princess is in Another Castle! \n(reach the end of the competition)")
-		}
-        else if (match >= 81){
-            alert("Achievement Get: \nTake the Red Pill. \n(break the matrix by scouting past match 80)");
-        }
-        var team = $("#team_id").val();
-        if (team == 830){
-            alert("Achievement Get: \nRodents of Unusual Size. \n(I don't believe they exist)");
-        }
-        var switchCubes = $("#cube_switch").val();
-        var scaleCubes = $("#cube_scale").val();
-        var vaultCubes = $("#cube_vault").val();
-        var cubesPickedUp = $("#cube_count").val();
-        /*if (switchCubes < 0 || scaleCubes < 0 || vaultCubes < 0 || cubesPickedUp < 0){
-            alert("Achievement Get: \nOur Princess is in Another Castle \n(score negative cubes)");
-        }*/
-        if (switchCubes >= 100 || scaleCubes >= 100 || vaultCubes >= 100 || cubesPickedUp >= 100){
-        	alert("Achievement Get: \n0 to 100 real quick!!!! \n(have more than 100 cubes in any field)");
-        }
-        if (vaultCubes == 9){
-        	alert("Achievement Get: \nInto the Nether! \n(fill the vault completely)");
-        }
-        if (switchCubes + scaleCubes == 1){
-        	alert("Achievement Get: \nBut you rolled a One... \n(robot scores only one cube during a match)");
-        }
-        else if (switchCubes < 1 && scaleCubes < 1 && vaultCubes < 1){
-        	alert("Achievement Get: \nBrought a Knife to a Gunfight \n(robot does nothing)");
-        }
-        var techFouls =  parseInt($("#tech_fouls").val()) 
-        var fouls = parseInt($("#fouls").val());
-        if (fouls >= 2){
-            alert("Achievement Get: \nKamehamehaaaaa! \n(commit two or more fouls in a match)");
-        }
-        else if (techFouls >= 2){
-        	 alert("Achievement Get: \nIt's dangerous to go alone! \n(get two or more tech fouls)");
-        }
-        var autonCubesPickedUp = $("#auton_cube_count")
-        var autonLine = $("#cross_line").prop('checked')
-        var autonScale = $("#auton_ci_scale").prop('checked')
-        var autonSwitch = $("#auton_ci_switch").prop('checked')
-        if (autonLine && autonScale){
-        	alert("Achievement Get: \nIt's super effective! \n(cross the line and score a cube in the scale during auton)");
-        }
-         if (autonLine && autonScale && autonSwitch){
-        	alert("Achievement Get: \nGotta go fast! \n(cross the line, score a cube in the scale, AND score a cube in the switch ALL DURING AUTON )");
-        }
-        if ($('#comments').val().toLowerCase().indexOf("deactivate") != -1 || $('#comments').val().toLowerCase().indexOf("disable") != -1){
-			alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
-		}
-
-        if(scaleCubes + switchCubes + vaultCubes < (cubesPickedUp + autonCubesPickedUp)){
-            alert("Achievement Get: \nMess with the best, you will lose like the rest! \n(pick up more cubes than cubes scored)");
-        }
-        if(scaleCubes +switchCubes + vaultCubes > (cubesPickedUp +autonCubesPickedUp)){
-            alert("Achievement Get: \nBack from the Future! \n(break the laws of mathematics. Usage of a Flux Capacitor is optional)");
-        }
-
-        // if (hab_end_robot = 3){ alert("Achievement Get: \n Beam us up, Scotty! \n(Ascend to Level 3)");
-
-        // if (ball_rock_1_ball_rock_2ball_rock_3}})
-        
-
+$("#auton_cross_line").change(function () {
+    count++;
+    if (count >= 3) {
+        $(".form-field").fadeOut(2000).fadeIn(2000);
+    }
 })
-})
+$(function () {
+
+var comments = $("#comments").val();
+var match = $("#match_id").val();
+var techFouls = parseInt($("#tech_fouls").val())
+var fouls = parseInt($("#fouls").val());
+var hab_end_robot = parseInt($("#match_id").val());
+var ball_rock_1 = parseInt($("#ball_rock_1").val());
+var ball_rock_2 = parseInt($("#ball_rock_2").val());
+var ball_rock_3 = parseInt($("#ball_rock_3").val());
+var helping_robot_climb = $("#helping_robot_climb").prop('checked')
+var team = $("#team_id").val();
+var hatch_rock_1 = parseInt($("#hatch_rock_1").val());
+var hatch_rock_2 = parseInt($("#hatch_rock_2").val());
+var hatch_rock_3 = parseInt($("#hatch_rock_3").val());
+var hatch_rocket_total = hatch_rock_1 + hatch_rock_2 + hatch_rock_1;
+var ball_rocket_total = ball_rock_1 + ball_rock_2 + ball_rock_3;
+var hab_start_robot = parseInt($('#hab_start_robot').val());
+var auton_ball_cargo = parseInt($('#auton_ci_ball_cargo').val());
+var auton_hatch_cargo = parseInt($('#auton_ci_hatch_cargo').val());
+var hatch_total = hatch_rocket_total +auton_hatch_cargo+hatch_cargo
+var ball_total = ball_rocket_total+auton_ball_cargo+ball_cargo
+var match_elements_total = hatch_rocket_total + ball_rocket_total + ball_cargo
++ hatch_cargo + auton_ball_cargo + auton_hatch_cargo
+var ball_cargo= parseInt($("#ball_cargo").val());
+/*
+Achievement Ideas
+[x] Level 3 Climb:"Beam us up, Scotty"
+[x] Score 6 items in Rocket: "Liftoff"
+[ ] Does Nothing in Sandstorm:"No Sign of Intelligent Life"
+[ ] Get 6 items into the Cargo Ship:"Kessel Run in 12 Parasecs"
+[x] Start on level 2; "One Small Step"
+[x] Score 10+ elements in rockets:"Apollo 11"
+[ ] Score 6+ hatches:"Open Pod Bay Doors"
+[X] If the Robot only scores Cargo
+[X] If the Robot only scores Hatches
+[X] Robot does nothing:"Houston, we have a Problem"
+[ ] Robot scores fewer than 4 elements:"Mike Pence's Space Force"
+[ ] Robot doesn't cross line in Sandstorm:"I'm sorry Dave, I'm afraid I can't do that"
+*/
+
+// Comment Based
+if (comments.length > 110) {
+    alert("Achievement Get: \nStar Wars.\nCongratulations on finishing your novel, \"Comments\".");
+}
+if 
+// Match Number
+if (match == 1) {
+    alert("Achievement Get: \nWe are Number One! \n(scout the first match)");
+} else if (match == 80) {
+    alert("Achievement Get: \nOur Princess is in Another Castle! \n(reach the end of the competition)")
+} else if (match >= 81) {
+    alert("Achievement Get: \nTake the Red Pill. \n(break the matrix by scouting past match 80)");
+}
+// Team Number
+if (team == 830) {
+    alert("Achievement Get: \nNuclear Rats... \n(I can't pronounce 'r')");
+} else if (team == 3322) {
+    alert("Acheivement Get: \n Not visible in skyline")
+}
+
+// Fouls
+if (fouls >= 2) {
+    alert("Achievement Get: \nKamehamehaaaaa! \n(commit two or more fouls in a match)");
+} else if (techFouls >= 2) {
+    alert("Achievement Get: \nSet phasers to stun!\n(get two or more tech fouls)");
+}
+
+// Habitat Starting Positions
+if (hab_start_robot == 2) {
+    alert("Achievement Get: \n One Small Step \n(Start from Habitat Level 2)")
+}
+
+// Habitat Ending Positions
+if (hab_end_robot = 3) {
+    alert("Achievement Get: \nBeam us up, Scotty! \n(Ascend to Level 3)");
+}
+if (hab_end_robot = 4) {
+    alert("Achievement Get: \nKhaaannn! \n(Fail to enter Habitat)");
+}
+
+// Balls in a rocket
+if (ball_rock_1)
+
+if (ball_rock_1 >= 4 || ball_rock_2 >= 4 || ball_rock_3 >= 4) {
+    alert("Achievement Get: \nHighly Illogical... :)! \n(Put more balls than needed into a rocket.)");
+}
+
+// Balls in cargoship
+
+
+
+// Helping Robot
+if (helping_robot_climb) {
+    alert("Achievement Get: \nMake it so \n(Robot Aids Another to Climb)")
+}
+// Hatches in a rocket
+if (hatch_rock_1 >= 2 && hatch_rock_2 >= 2 && hatch_rock_3 >= 2) {
+    alert("Achievement Get: \nI'm Givin' Her All She's Got, Captain! \n(Place 6 hatches on a rocket");
+}
+
+if (hatch_rocket_total >= 1 && ball_rocket_total == 0){
+    alert("Achievement Get: \nRichard Hatch \n(Score only Hatches)")
+}
+if (hatch_rocket_total == 0 && ball_rocket_total >= 1){
+    alert("Achievement Get: \nLucille Ball \n(Score only Balls)")
+}
+// Rocket Total Based
+if(hatch_rocket_total + ball_rocket_total >= 10){
+    alert("Achievement Get: \nApollo 11 \n (Score 10+ Elements in Rockets)")
+} else if (hatch_rocket_total + ball_rocket_total >= 6) {
+    alert("Achievement Get: \nLiftoff \n (Score 6+ Elements in Rockets)")
+} else  ()hhatch_rocket_total + ball_rocket_total <= 4 {}
+    alert("Achievement Get: \n Mike Pence's Space Force \n (Score 4- Elements in Rockets)")
+  
+ if (match_elements_total)== 0){
+    alert("Achievement Get: \nHouston, We Have a Problem \n(Robot Does Nothing)")
+}
+
+
+ //Remember to make an Achievement name for this one!
+if(hatch_total== 0){
+    alert("Achievement Get:/n    /n(Score Only Cargo)")
+} //Remember to make an Achievement name for this one too!
+if(ball_total == 0){
+    alert("Achievement Get: /n   /n(Score only Hatches)")
+}
+

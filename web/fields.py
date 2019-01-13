@@ -81,4 +81,4 @@ How fast was said mechanism?',
 
 
     cool_factor = RadioField('Did they (bribe) give us stuff? Are they nice?', 
-        choices =[('0', 'Much Sadness'), ('1', 'Not very Dogelike things'), ('2', 'Very Swag')], default="0")
+        choices =[('0', 'No'), ('1', 'Yes, but it was dumb stuff'), ('2', 'Very Swag')], default="0")

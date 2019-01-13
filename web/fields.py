@@ -2,13 +2,13 @@ import flask_wtf
 from widgets import * #http://wtforms.readthedocs.org/en/latest/fields.html
 
 class BallField(CheckboxButtonField):
-    col_md = 2
-    col_sm = 4
+    col_md = 12#2
+    col_sm = 12#4
     col_xs = 12
 
 class HatchField(CheckboxButtonField):
-    col_md = 2
-    col_sm = 4
+    col_md = 12#2
+    col_sm = 12#4
     col_xs = 12
 
 class Form(flask_wtf.Form):
@@ -18,8 +18,8 @@ class Form(flask_wtf.Form):
     # Sandstorm
 
     hab_start_robot = RadioField('What Habitat did the robot start in?', 
-        choices =[('0', 'Base'), ('1', 'Left 2nd Level'), \
-        ('2', 'Right 2nd Level'), ('3', 'Top Level')], default="0")
+        choices =[('0', 'Level 1'), ('1', 'Level 2 Left'), \
+        ('2', 'Level 2 Right'), ('3', 'Level 3')], default="0")
     auton_cross_line = CheckboxButtonField('Did the Robot cross the line?')
 
     auton_ci_pick_ball_cargo = BallField('Pre-game Picked Ball In Cargo')
@@ -28,9 +28,9 @@ class Form(flask_wtf.Form):
     auton_ci_ball_cargo = BallField('Placed Ball In Cargo')
     auton_ci_hatch_cargo = HatchField('Placed Hatch On Cargo')
 
-    auton_ci_ball_rock_1 = IntegerField('Ball Rocket Level 1', default=0, col_sm=4)
-    auton_ci_ball_rock_2 = IntegerField('Ball Rocket Level 2', default=0, col_sm=4)
-    auton_ci_ball_rock_3 = IntegerField('Ball Rocket Level 3', default=0, col_sm=4)
+    auton_ci_ball_rock_1 = IntegerField('Ball Rocket Level 1', default=0, col_sm=8)
+    auton_ci_ball_rock_2 = IntegerField('Ball Rocket Level 2', default=0, col_sm=8)
+    auton_ci_ball_rock_3 = IntegerField('Ball Rocket Level 3', default=0, col_sm=8)
 
     auton_ci_hatch_rock_1 = IntegerField('Hatch Rocket Level 1', default=0, col_sm=8)
     auton_ci_hatch_rock_2 = IntegerField('Hatch Rocket Level 2', default=0, col_sm=8)
@@ -45,9 +45,9 @@ class Form(flask_wtf.Form):
     ball_cargo = IntegerField('Ball In Cargo', default=0, col_sm=6)
     hatch_cargo = IntegerField('Hatch In Cargo', default=0, col_sm=6)
 
-    ball_rock_1 = IntegerField('Ball Rocket Level 1', default=0, col_sm=4)
-    ball_rock_2 = IntegerField('Ball Rocket Level 2', default=0, col_sm=4)
-    ball_rock_3 = IntegerField('Ball Rocket Level 3', default=0, col_sm=4)
+    ball_rock_1 = IntegerField('Ball Rocket Level 1', default=0, col_sm=8)
+    ball_rock_2 = IntegerField('Ball Rocket Level 2', default=0, col_sm=8)
+    ball_rock_3 = IntegerField('Ball Rocket Level 3', default=0, col_sm=8)
 
     hatch_rock_1 = IntegerField('Hatch Rocket Level 1', default=0, col_sm=8)
     hatch_rock_2 = IntegerField('Hatch Rocket Level 2', default=0, col_sm=8)
@@ -56,7 +56,7 @@ class Form(flask_wtf.Form):
     ball_dropped = IntegerField('Balls Dropped', default=0, col_sm=4)
     hatch_dropped = IntegerField('Hatch Dropped', default=0, col_sm=4)
     
-    hatch_pickup = CheckboxButtonField('Robot Can Retrieve Hatches, Ball from Ground', col_md=3)
+    hatch_pickup = CheckboxButtonField('Robot Can Retrieve Hatches, Ball from Ground', col_md=8)
     comments = TextAreaField('', col_lg=12)
 
 
@@ -65,14 +65,13 @@ class Form(flask_wtf.Form):
 
     helping_robot_climb = CheckboxButtonField('Robot Helped Another Robot Climb', col_md=3)
     comments = TextAreaField('', col_lg=12)
-    helping_robot_field= CheckboxButtonField('Robot Helped Another Robot Get Ball, Hatch', col_md=3)
+    helping_robot_field= CheckboxButtonField('Robot Helped Another Robot Get Ball, Hatch', col_md=8)
     comments = TextAreaField('', col_lg=12)
 
 
-
     hab_end_robot = RadioField('What Habitat did the robot end in?', 
-        choices =[('0', 'Base'), ('1', 'Left 2nd Level'), ('2', 'Right 2nd Level'), \
-        ('3', 'Top Level'), ('4', 'Did not enter habitat')], default="4")
+        choices =[('0', 'Level 1'), ('1', 'Left Level 2'), ('2', 'Right Level 2'), \
+        ('3', 'Level 3'), ('4', 'Did not enter habitat')], default="4")
 
     mechanism_scr = RadioField('What mechanism did they use to interact meaningfully with the ball? \
 How fast was said mechanism?', 

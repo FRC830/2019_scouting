@@ -65,59 +65,58 @@
       {{form.hatch_cargo}}
     </div>
     <h4>Rocket Cargo</h4>
-  <div class="row">
-    {{form.ball_rock_1}}
-    {{form.ball_rock_2}}
-    {{form.ball_rock_3}}
-  </div>
-  <div class="row">
-    {{form.hatch_rock_1}}
-    {{form.hatch_rock_2}}
-    {{form.hatch_rock_3}}
-  </div>
-  <div class="row">
-    {{form.ball_dropped}}
-    {{form.hatch_dropped}}
-  </div>
-  <div class="row">
-    <!-- {{form.comments}} -->
-    {{form.fouls}}
-    {{form.tech_fouls}}
-  </div>
-  <div class="row">
-    {{form.helping_robot_climb}}
-    {{form.hatch_pickup}}
-    {{form.helping_robot_field}}
-  </div>
+    <div class="row">
+      {{form.ball_rock_1}}
+      {{form.ball_rock_2}}
+      {{form.ball_rock_3}}
+    </div>
+    <div class="row">
+      {{form.hatch_rock_1}}
+      {{form.hatch_rock_2}}
+      {{form.hatch_rock_3}}
+    </div>
+    <div class="row">
+      {{form.ball_dropped}}
+      {{form.hatch_dropped}}
+    </div>
+    <div class="row">
+      <!-- {{form.comments}} -->
+      {{form.fouls}}
+      {{form.tech_fouls}}
+    </div>
+    <div class="row">
+      {{form.helping_robot_climb}}
+      {{form.hatch_pickup}}
+      {{form.helping_robot_field}}
+    </div>
   </div>
 
   <div class="game-period">
 
     <!--Add Checkbox and End Game-->
 
-    <h3>End Game</h3>
-    <h5>What habitat did the Robot score?</h5>
+    <h3>End Game & Comments</h3>
+
     <div class="col-md-3 col-xs-12">
+      <h4>What habitat did the Robot score?</h4>
       {{form.hab_end_robot}}
     </div>
-    <h5>What type of Robot was it?</h5>
+
     <div class="col-md-3 col-xs-12">
+      <h4>What type of Robot was it?</h4>
       {{form.mechanism_scr}}
     </div>
 
-  </div>
-
-  <h4>How cool was the team?</h4>
-  <div class="col-md-3 col-xs-12">
-    {{form.cool_factor}}
-  </div>
-  <div class="row">
+    <div class="col-md-3 col-xs-12">
+      <h4>How cool was the team?</h4>
+      {{form.cool_factor}}
+    </div>
     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
       <h3>Comments</h3>
       {{ form.comments(rows='5') }}
     </div>
-  </div>
 
+  </div>
 
   <div class="row">
     <div class="col-md-4"><input type="submit" id="submit" class="btn btn-primary" value="Save"></div>

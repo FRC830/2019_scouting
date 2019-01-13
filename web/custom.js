@@ -19,15 +19,15 @@ $(function () {
             $('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
         } else if (comment.indexOf("deactivate") != -1 || comment.indexOf("disable") != -1) {
             alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
-        } else if (comments.indexOf("Doctor Disco") != -1) {
+        } else if (comments.indexOf("doctor disco") != -1) {
             alert("Achievement Get: \n I'm a robot, not a doctor \n(Type Doctor Disco)");
         } else if (comment.indexOf("defense") != -1) {
             alert("Ready to Rumble");
-        } else if (comment.indexOf("Starlord") != -1) {
+        } else if (comment.indexOf("starlord") != -1) {
             alert("I know who you are, Peter Quill")
-        } else if (comment.indexOf("Infinity") != -1) {
+        } else if (comment.indexOf("infinity") != -1) {
             alert("Robots. Robots Everywhere")
-        } else if (comment.indexOf("TO THE MOON")!= -1){
+        } else if (comment.indexOf("to the moon")!= -1){
             $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
         }
 

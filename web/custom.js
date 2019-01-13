@@ -27,7 +27,10 @@ $(function () {
             alert("I know who you are, Peter Quill")
         } else if (comment.indexOf("Infinity") != -1) {
             alert("Robots. Robots Everywhere")
+        } else if (comment.indexOf("TO THE MOON")!= -1){
+            $('img:nth(0)').attr('src','/static/custom/MOON.jpg')
         }
+
     })
 })
 

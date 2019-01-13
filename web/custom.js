@@ -20,8 +20,14 @@ $(function () {
         } else if (comment.indexOf("deactivate") != -1 || comment.indexOf("disable") != -1) {
             alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
         } else if (comments.indexOf("Doctor Disco") != -1) {
-            alert("Achievement Get: \n I'm a robot, not a doctor \n()");
-        }
+            alert("Achievement Get: \n I'm a robot, not a doctor \n(Type Doctor Disco)");
+        } else if (comment.indexOf("defense") != -1){
+            alert("Ready to Rumble");            
+        } else if (comment.indexOf("Starlord") != -1) {
+            alert("I know who you are, Peter Quill")
+        } else if (comment.indexOf("Infinity") != -1) {
+            alert("Robots. Robots Everywhere")
+        } 
     })
 }) 
 
@@ -37,7 +43,8 @@ $("#auton_cross_line").change(function () {
     if (count >= 3) {
         $(".form-field").fadeOut(2000).fadeIn(2000);
     }
-})
+});
+
 $(function () {
 
 var comments = $("#comments").val();
@@ -62,28 +69,48 @@ var hatch_total = hatch_rocket_total +auton_hatch_cargo+hatch_cargo
 var ball_total = ball_rocket_total+auton_ball_cargo+ball_cargo
 var match_elements_total = hatch_rocket_total + ball_rocket_total + ball_cargo
 + hatch_cargo + auton_ball_cargo + auton_hatch_cargo
-var ball_cargo= parseInt($("#ball_cargo").val());
+var ball_cargo = parseInt($("#ball_cargo").val());
+var cargo_total = hatch_cargo + ball_cargo
+var cross_line = $("#auton_cross_line").prop('checked')
+
 /*
 Achievement Ideas
 [x] Level 3 Climb:"Beam us up, Scotty"
 [x] Score 6 items in Rocket: "Liftoff"
-[ ] Does Nothing in Sandstorm:"No Sign of Intelligent Life"
-[ ] Get 6 items into the Cargo Ship:"Kessel Run in 12 Parasecs"
+[x] Scores fewer than 3 Elements:"No Sign of Intelligent Life"
+[x] Get 6 items into the Cargo Ship:"Kessel Run in 12 Parasecs"
 [x] Start on level 2; "One Small Step"
 [x] Score 10+ elements in rockets:"Apollo 11"
-[ ] Score 6+ hatches:"Open Pod Bay Doors"
-[X] If the Robot only scores Cargo
-[X] If the Robot only scores Hatches
-[X] Robot does nothing:"Houston, we have a Problem"
-[ ] Robot scores fewer than 4 elements:"Mike Pence's Space Force"
-[ ] Robot doesn't cross line in Sandstorm:"I'm sorry Dave, I'm afraid I can't do that"
-*/
+[x] Score 6+ hatches:"Open Pod Bay Doors"
+[X] If the Robot only scores Cargo:"A little. I made a ball"
+[X] If the Robot only scores Hatches:"Correction, sir. That's 'Blown out.'"
+[X] Robot does nothing/never scores:"Houston, we have a Problem"
+[X] Robot scores fewer than 4 elements:"Mike Pence's Space Force"
+[x] Robot doesn't cross line in Sandstorm:"I'm sorry Dave, I'm afraid I can't do that"
+[x]  Robot doesn't reach the Habitats:"Khaaannn!"  
+[X] "Defense" in the Comments:"Ready to Rumble!"
+[x] Scout 830: "Rodents of Unusual Size"
 
+*/
+//hi
+if (team == 830){
+    alert("Achievement Get: \nRodents of Unusual Size")
+} 
+if (hatch_total >= 6){
+    alert("Achievement Get: \nOpen Pod Bay Doors")
+}
+if (cargo_total > 6){
+    alert("Achievement Get: \nKesse Run in 12 Parasecs")
+}
+//utterly useless comment
+if (match_elements_total<3){
+    alert("Achievement Get: \nNo sign of Intelligent Life")
+}
 // Comment Based
 if (comments.length > 110) {
     alert("Achievement Get: \nStar Wars.\nCongratulations on finishing your novel, \"Comments\".");
 }
-if 
+
 // Match Number
 if (match == 1) {
     alert("Achievement Get: \nWe are Number One! \n(scout the first match)");
@@ -93,30 +120,33 @@ if (match == 1) {
     alert("Achievement Get: \nTake the Red Pill. \n(break the matrix by scouting past match 80)");
 }
 // Team Number
-if (team == 830) {
-    alert("Achievement Get: \nNuclear Rats... \n(I can't pronounce 'r')");
-} else if (team == 3322) {
+if (team == 3322) {
     alert("Acheivement Get: \n Not visible in skyline")
 }
 
 // Fouls
-if (fouls >= 2) {
-    alert("Achievement Get: \nKamehamehaaaaa! \n(commit two or more fouls in a match)");
+if (fouls <= 2) {
+    alert("Achievement Get: \nGracious Profesionalism! \n(commit less than fouls in a match)");
 } else if (techFouls >= 2) {
     alert("Achievement Get: \nSet phasers to stun!\n(get two or more tech fouls)");
 }
 
 // Habitat Starting Positions
 if (hab_start_robot == 2) {
-    alert("Achievement Get: \n One Small Step \n(Start from Habitat Level 2)")
+    alert("Achievement Get: \n One Small Step \n(Start from Habitat Level 2)");
 }
 
 // Habitat Ending Positions
 if (hab_end_robot = 3) {
     alert("Achievement Get: \nBeam us up, Scotty! \n(Ascend to Level 3)");
 }
-if (hab_end_robot = 4) {
+if (hab_end_robot = 0) {
     alert("Achievement Get: \nKhaaannn! \n(Fail to enter Habitat)");
+}
+
+//useless commet
+if (!cross_line){
+    alert("Achievement Get: \nI'm sorry Dave, I'm afraid I can't do that")
 }
 
 // Balls in a rocket
@@ -127,10 +157,10 @@ if (ball_rock_1 >= 4 || ball_rock_2 >= 4 || ball_rock_3 >= 4) {
 }
 
 // Balls in cargoship
+if (ball_cargo == 0){         
+    alert("Achievement Get: \nThe one scene in the Magic School Bus season one episode one when the freckled \nred haired kid goes to the moon, takes off his helmet and cause his entire head to freeze and become an ice block. \nWhile he's in the spaceship his head thaws but he catches a cold and the episode ends with him \nback on earth with a cold, blowing his nose next to a pile of used tissues \n(Pushed in 0 balls)");
+}
 
-
-
-// Helping Robot
 if (helping_robot_climb) {
     alert("Achievement Get: \nMake it so \n(Robot Aids Another to Climb)")
 }
@@ -150,19 +180,21 @@ if(hatch_rocket_total + ball_rocket_total >= 10){
     alert("Achievement Get: \nApollo 11 \n (Score 10+ Elements in Rockets)")
 } else if (hatch_rocket_total + ball_rocket_total >= 6) {
     alert("Achievement Get: \nLiftoff \n (Score 6+ Elements in Rockets)")
-} else  ()hhatch_rocket_total + ball_rocket_total <= 4 {}
+} else if(hatch_rocket_total + ball_rocket_total <= 4) {
     alert("Achievement Get: \n Mike Pence's Space Force \n (Score 4- Elements in Rockets)")
-  
- if (match_elements_total)== 0){
+}
+ if (match_elements_total == 0){
     alert("Achievement Get: \nHouston, We Have a Problem \n(Robot Does Nothing)")
 }
 
 
+
  //Remember to make an Achievement name for this one!
 if(hatch_total== 0){
-    alert("Achievement Get:/n    /n(Score Only Cargo)")
+    alert("Achievement Get:\nA little. I made a ball    \n(Score Only Cargo)")
 } //Remember to make an Achievement name for this one too!
 if(ball_total == 0){
-    alert("Achievement Get: /n   /n(Score only Hatches)")
+    alert("Achievement Get: \nCorrection, sir. That's 'Blown out.'   \n(Score only Hatches)")
 }
 
+});

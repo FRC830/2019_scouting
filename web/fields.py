@@ -70,12 +70,11 @@ class Form(flask_wtf.Form):
 
 
     hab_end_robot = RadioField('What Habitat did the robot end in?', 
-        choices =[('0', 'Level 1'), ('1', 'Left Level 2'), ('2', 'Right Level 2'), \
-        ('3', 'Level 3'), ('4', 'Did not enter habitat')], default="4")
+        choices =[('1', 'Level 1'), ('2L', 'Left Level 2'), ('2R', 'Right Level 2'), \
+        ('3', 'Level 3'), ('0', 'Did not enter habitat')], default="0")
 
-    mechanism_scr = RadioField('What mechanism did they use to interact meaningfully with the ball? \
-How fast was said mechanism?', 
-        choices=[('0', 'Shooter'), ('1', 'Elevator'), ('2', 'Other')], default="2")
+    mechanism_scr = RadioField('What mechanism did they use to interact meaningfully with the ball?', 
+        choices=[('shooter', 'Shooter'), ('elevator', 'Elevator'), ('other', 'Other'), ('none', 'None')], default="none")
 
     comments_mechanism = TextAreaField('', col_lg=12)
 

@@ -28,7 +28,7 @@ $(function () {
         } else if (comment.indexOf("Infinity") != -1) {
             alert("Robots. Robots Everywhere")
         } else if (comment.indexOf("TO THE MOON")!= -1){
-            $('img:nth(0)').attr('src','/static/custom/MOON.jpg')
+            $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
         }
 
     })
@@ -128,8 +128,8 @@ $(document).on('submit', 'form', function () {
     }
 
     // Fouls
-    if (fouls == 0) {
-        alert("Achievement Get: \nGracious Profesionalism! \n(commit no fouls in a match)");
+    if (fouls == 0 && techFouls == 0) {
+        alert("Achievement Get: \nGracious Profesionalism! \n(commit no fouls or tech fouls in a match)");
     } else if (techFouls >= 2) {
         alert("Achievement Get: \nSet phasers to stun!\n(get two or more tech fouls)");
     }
@@ -161,10 +161,10 @@ $(document).on('submit', 'form', function () {
 
     // Balls in cargoship
     if (ball_cargo == 0) {
-        alert("Achievement Get: \nThe one scene in the Magic School Bus season one episode one when the freckled " + 
-            "red haired kid goes to the moon, takes off his helmet and cause his entire head to freeze and become an ice block. " +
-            "While he's in the spaceship his head thaws but he catches a cold and the episode ends with him " + 
-            "back on earth with a cold, blowing his nose next to a pile of used tissues \n(Pushed in 0 balls)");
+        //alert("Achievement Get: \nThe one scene in the Magic School Bus season one episode one when the freckled " + 
+            //"red haired kid goes to the moon, takes off his helmet and cause his entire head to freeze and become an ice block. " +
+            //"While he's in the spaceship his head thaws but he catches a cold and the episode ends with him " + 
+            //"back on earth with a cold, blowing his nose next to a pile of used tissues \n(Pushed in 0 balls)");
     }
 
     if (helping_robot_climb) {

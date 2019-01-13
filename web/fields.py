@@ -59,8 +59,8 @@ class Form(flask_wtf.Form):
     # comments = TextAreaField('', col_lg=12)
 
 
-    fouls = IntegerField('Fouls', default=6, col_sm=6)
-    tech_fouls = IntegerField('Tech Fouls', default=6, col_sm=6)
+    fouls = IntegerField('Fouls', default=0, col_sm=6)
+    tech_fouls = IntegerField('Tech Fouls', default=0, col_sm=6)
 
     helping_robot_climb = CheckboxButtonField('Robot Helped Another Robot Climb', col_md=3)
     comments = TextAreaField('', col_lg=12)

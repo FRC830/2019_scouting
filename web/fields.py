@@ -2,20 +2,20 @@ import flask_wtf
 from widgets import * #http://wtforms.readthedocs.org/en/latest/fields.html
 
 class BallField(CheckboxButtonField):
-    col_md = 12#2
-    col_sm = 12#4
+    col_md = 2
+    col_sm = 4
     col_xs = 12
 
 class HatchField(CheckboxButtonField):
-    col_md = 12#2
-    col_sm = 12#4
+    col_md = 2
+    col_sm = 4
     col_xs = 12
 
 class Form(flask_wtf.Form):
     match_id = IntegerField('Match ID', buttons=False)
     team_id = IntegerField('Team ID', buttons=False)
 
-    # Sandstorm
+    # Sandstorm what are you doing come in here so i can talk to you
 
     hab_start_robot = RadioField('What Habitat did the robot start in?', 
         choices =[('0', 'Level 1'), ('1', 'Level 2 Left'), \

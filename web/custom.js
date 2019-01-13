@@ -1,5 +1,6 @@
 $(function() {
 	$('#comments').keyup(function(){
+        /* comment based parsing*/
 		if ($('#comments').val().toLowerCase().indexOf("rainbow") != -1) {
 			$('.content').css('background','linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
 		}
@@ -24,6 +25,7 @@ $(function() {
             alert("SUPER ACHIEVEMENT GET: \nHacker! \n(Discover the cheat code!)");
 		}
 		else {
+             alert("SUPER ACHIEVEMENT GET: \nHacker! \n(Discover the cheat code!)");
 			$('img:nth(0)').attr('src', '/static/custom/known.png')
 		}
 	})
@@ -107,6 +109,11 @@ $(function() {
         if(scaleCubes +switchCubes + vaultCubes > (cubesPickedUp +autonCubesPickedUp)){
             alert("Achievement Get: \nBack from the Future! \n(break the laws of mathematics. Usage of a Flux Capacitor is optional)");
         }
+
+        // if (hab_end_robot = 3){ alert("Achievement Get: \n Beam us up, Scotty! \n(Ascend to Level 3)");
+
+        // if (ball_rock_1_ball_rock_2ball_rock_3}})
+        
 
 })
 })

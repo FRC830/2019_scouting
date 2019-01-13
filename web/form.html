@@ -9,7 +9,7 @@
   {{ form.csrf_token }}
   <!-- <img src="static/custom/known.png" align = "left" id="logo" class></img> -->
   <div class="row">
-    <img src="static/custom/known.png" id="logo" width="200" class="pull-right"></img>
+    <img src="static/custom/deep_space.png" id="logo" width="200" class="pull-right"></img>
     <div class="col-md-8 col-xs-8 text-right">
       {{ form.match_id }}
       {{ form.team_id }}
@@ -27,56 +27,30 @@
     </div>
   </div>
   <div class="game-period">
-    <!--Sandstorm Forms-->
+    <!--Sandst orm Forms-->
     <h3>Sandstorm & Auton</h3>
 
     <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.hab_start_robot}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_cross_line}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_ci_ball_cargo}}
-      </div>
+      {{form.hab_start_robot}}
+      {{form.auton_cross_line}}
+      {{form.auton_ci_ball_cargo}}
+      {{form.auton_ci_hatch_cargo}}
+      {{form.auton_ball_count}}
+
     </div>
 
     <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_ci_hatch_cargo}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_ci_ball_rock_1}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_ci_ball_rock_2}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_ci_ball_rock_3}}
-      </div>
-
-      <div class="col-md-3 col-xs-8">
-        {{form.auton_ci_hatch_rock_1}}
-      </div>
-
-      <div class="col-md-3 col-xs-8">
-        {{form.auton_ci_hatch_rock_2}}
-      </div>
-
-      <div class="col-md-3 col-xs-8">
-        {{form.auton_ci_hatch_rock_3}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.auton_ball_count}}
-      </div>
+      {{form.auton_ci_ball_rock_1}}
+      {{form.auton_ci_ball_rock_2}}
+      {{form.auton_ci_ball_rock_3}}
+    </div>
+    <div class="row">
+      {{form.auton_ci_hatch_rock_1}}
+      {{form.auton_ci_hatch_rock_2}}
+      {{form.auton_ci_hatch_rock_3}}
     </div>
   </div>
-  
+
   <div class="game-period">
 
     <!--Teleop Forms-->
@@ -85,72 +59,33 @@
 
     <div class="row">
 
-      <div class="col-md-6 col-xs-12">
-        {{form.ball_count}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.ball_cargo}}
-      </div>
+      {{form.ball_count}}
+      {{form.ball_cargo}}
 
-      <div class="col-md-6 col-xs-12">
-        {{form.hatch_cargo}}
-      </div>
+      {{form.hatch_cargo}}
     </div>
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.ball_rock_1}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.ball_rock_2}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.ball_rock_3}}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.hatch_rock_1}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.hatch_rock_2}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.hatch_rock_3}}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.ball_dropped}}
-      </div>
-
-      <div class="col-md-6 col-xs-12">
-        {{form.hatch_dropped}}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.hatch_pickup}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.comments}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.fouls}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.tech_fouls}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.heling_robot_climb}}
-      </div>
-      <div class="col-md-6 col-xs-12">
-        {{form.helping_robot_field}}
-      </div>
-    </div>
-
-
+  <div class="row">
+    {{form.ball_rock_1}}
+    {{form.ball_rock_2}}
+    {{form.ball_rock_3}}
+  </div>
+  <div class="row">
+    {{form.hatch_rock_1}}
+    {{form.hatch_rock_2}}
+    {{form.hatch_rock_3}}
+  </div>
+  <div class="row">
+    {{form.ball_dropped}}
+    {{form.hatch_dropped}}
+  </div>
+  <div class="row">
+    {{form.hatch_pickup}}
+    {{form.comments}}
+    {{form.fouls}}
+    {{form.tech_fouls}}
+    {{form.heling_robot_climb}}
+    {{form.helping_robot_field}}
+  </div>
   </div>
 
   <div class="game-period">
@@ -159,15 +94,11 @@
 
     <h3>End Game</h3>
     <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.hab_end_robot}}
-      </div>
+      {{form.hab_end_robot}}
     </div>
 
     <div class="row">
-      <div class="col-md-6 col-xs-12">
-        {{form.mechanism_scr}}
-      </div>
+      {{form.mechanism_scr}}
     </div>
 
   </div>

@@ -18,8 +18,7 @@ class Form(flask_wtf.Form):
     # Sandstorm what are you doing come in here so i can talk to you
 
     hab_start_robot = RadioField('What Habitat did the robot start in?', 
-        choices =[('0', 'Level 1'), ('1', 'Level 2 Left'), \
-        ('2', 'Level 2 Right'), ('3', 'Level 3')], default="0")
+        choices =[('0', 'Level 1'), ('1', 'Level 2'), ('2', 'Level 3')], default="0")
     auton_cross_line = CheckboxButtonField('Did the Robot cross the line?')
 
     auton_ci_pick_ball_cargo = BallField('Pre-game Picked Ball In Cargo')
@@ -56,21 +55,21 @@ class Form(flask_wtf.Form):
     ball_dropped = IntegerField('Balls Dropped', default=0, col_sm=4)
     hatch_dropped = IntegerField('Hatch Dropped', default=0, col_sm=4)
     
-    hatch_pickup = CheckboxButtonField('Robot Can Retrieve Hatches, Ball from Ground', col_md=8)
-    comments = TextAreaField('', col_lg=12)
+    hatch_pickup = CheckboxButtonField('Robot Can Retrieve Hatches, Ball from Ground', col_sm=4)
+    # comments = TextAreaField('', col_lg=12)
 
 
-    fouls = IntegerField('Fouls', default=0, col_sm=6)
-    tech_fouls = IntegerField('Tech Fouls', default=0, col_sm=6)
+    fouls = IntegerField('Fouls', default=6, col_sm=6)
+    tech_fouls = IntegerField('Tech Fouls', default=6, col_sm=6)
 
     helping_robot_climb = CheckboxButtonField('Robot Helped Another Robot Climb', col_md=3)
     comments = TextAreaField('', col_lg=12)
-    helping_robot_field= CheckboxButtonField('Robot Helped Another Robot Get Ball, Hatch', col_md=8)
+    helping_robot_field= CheckboxButtonField('Robot Helped Another Robot Get Ball, Hatch', col_sm=4)
     comments = TextAreaField('', col_lg=12)
 
 
     hab_end_robot = RadioField('What Habitat did the robot end in?', 
-        choices =[('1', 'Level 1'), ('2L', 'Left Level 2'), ('2R', 'Right Level 2'), \
+        choices =[('1', 'Level 1'), ('2', 'Level 2'), \
         ('3', 'Level 3'), ('0', 'Did not enter habitat')], default="0")
 
     mechanism_scr = RadioField('What mechanism did they use to interact meaningfully with the ball?', 

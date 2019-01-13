@@ -64,6 +64,7 @@
 
       {{form.hatch_cargo}}
     </div>
+    <h4>Rocket Cargo</h4>
   <div class="row">
     {{form.ball_rock_1}}
     {{form.ball_rock_2}}
@@ -79,11 +80,13 @@
     {{form.hatch_dropped}}
   </div>
   <div class="row">
-    {{form.hatch_pickup}}
-    {{form.comments}}
+    <!-- {{form.comments}} -->
     {{form.fouls}}
     {{form.tech_fouls}}
-    {{form.heling_robot_climb}}
+  </div>
+  <div class="row">
+    {{form.helping_robot_climb}}
+    {{form.hatch_pickup}}
     {{form.helping_robot_field}}
   </div>
   </div>
@@ -104,17 +107,17 @@
 
   </div>
 
-
+  <h4>How cool was the team?</h4>
+  <div class="col-md-3 col-xs-12">
+    {{form.cool_factor}}
+  </div>
   <div class="row">
     <div class="col-md-3 col-xs-12">
       <h3>Comments</h3>
       {{ form.comments(rows='5') }}
     </div>
   </div>
-  <h4>How cool was the team?</h4>
-  <div class="col-md-3 col-xs-12">
-    {{form.cool_factor}}
-  </div>
+
 
   <div class="row">
     <div class="col-md-4"><input type="submit" id="submit" class="btn btn-primary" value="Save"></div>

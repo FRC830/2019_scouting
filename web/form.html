@@ -7,7 +7,6 @@
 </div>
 <form method="post" id="scouting-form" autocomplete="off">
   {{ form.csrf_token }}
-  <!-- <img src="static/custom/known.png" align = "left" id="logo" class></img> -->
   <div class="row">
     <img src="static/custom/deep_space.png" id="logo" width="200" class="pull-right"></img>
     <div class="col-md-8 col-xs-8 text-right">
@@ -27,11 +26,14 @@
     </div>
   </div>
   <div class="game-period">
-    <!--Sandst orm Forms-->
+    <!--Sandstorm Forms-->
     <h3>Sandstorm & Auton</h3>
 
     <div class="row">
-      {{form.hab_start_robot}}
+      <div class="col-md-4 col-xs-12">
+        <h4>What habitat did the Robot score?</h4>
+        {{form.hab_start_robot}}
+      </div>
       {{form.auton_cross_line}}
       {{form.auton_ci_ball_cargo}}
       {{form.auton_ci_hatch_cargo}}
@@ -57,70 +59,76 @@
 
     <h3>Teleop</h3>
 
+    <h4 style="text-align: center;">Cargo</h4>
     <div class="row">
-
       {{form.ball_count}}
       {{form.ball_cargo}}
-
       {{form.hatch_cargo}}
     </div>
-    <h4>Rocket Cargo</h4>
-  <div class="row">
-    {{form.ball_rock_1}}
-    {{form.ball_rock_2}}
-    {{form.ball_rock_3}}
-  </div>
-  <div class="row">
-    {{form.hatch_rock_1}}
-    {{form.hatch_rock_2}}
-    {{form.hatch_rock_3}}
-  </div>
-  <div class="row">
-    {{form.ball_dropped}}
-    {{form.hatch_dropped}}
-  </div>
-  <div class="row">
-    <!-- {{form.comments}} -->
-    {{form.fouls}}
-    {{form.tech_fouls}}
-  </div>
-  <div class="row">
-    {{form.helping_robot_climb}}
-    {{form.hatch_pickup}}
-    {{form.helping_robot_field}}
-  </div>
+    
+    <h4 style="text-align: center;">Rocket</h4>
+    <div class="row">
+      {{form.ball_rock_1}}
+      {{form.ball_rock_2}}
+      {{form.ball_rock_3}}
+    </div>
+    
+    <div class="row">
+      {{form.hatch_rock_1}}
+      {{form.hatch_rock_2}}
+      {{form.hatch_rock_3}}
+    </div>
+    <h4 style="text-align: center;">General</h4>
+    <div class="row">
+      {{form.ball_dropped}}
+      {{form.hatch_dropped}}
+    </div>
+    <div class="row">
+      {{form.fouls}}
+      {{form.tech_fouls}}
+    </div>
+    <br>
+    <div class="row">
+      {{form.helping_robot_climb}}
+      {{form.hatch_pickup}}
+      {{form.helping_robot_field}}
+    </div>
   </div>
 
   <div class="game-period">
 
     <!--Add Checkbox and End Game-->
-
-    <h3>End Game</h3>
-    <h5>What habitat did the Robot score?</h5>
     <div class="row">
-      {{form.hab_end_robot}}
+      <h3>End Game & Comments</h3>
+
+      <div class="col-md-4 col-xs-12">
+        <h4>What habitat did the Robot score?</h4>
+        {{form.hab_end_robot}}
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <h4>What type of Robot was it?</h4>
+        {{form.mechanism_scr}}
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <h4>How cool was the team?</h4>
+        {{form.cool_factor}}
+      </div>
     </div>
-    <h5>What type of Robot was it?</h5>
     <div class="row">
-      {{form.mechanism_scr}}
-    </div>
-
-  </div>
-
-  <h4>How cool was the team?</h5>
-  <div class="col-md-3 col-xs-12">
-    {{form.cool_factor}}
-  </div>
-  <div class="row">
-    <div class="col-md-3 col-xs-12">
-      <h3>Comments</h3>
-      {{ form.comments(rows='5') }}
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <h3>Comments</h3>
+        {{ form.comments(rows='5') }}
+      </div>
+      <br>
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <input type="submit" id="submit" class="btn btn-primary" value="Save">
+      </div>
     </div>
   </div>
 
 
-  <div class="row">
-    <div class="col-md-4"><input type="submit" id="submit" class="btn btn-primary" value="Save"></div>
   </div>
 
   <!--corrosponsds to top div-->

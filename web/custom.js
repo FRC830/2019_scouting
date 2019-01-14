@@ -4,12 +4,11 @@ $(function () {
         var comment = $('#comments').val().toLowerCase();
         if (comment.indexOf("rainbow") != -1) {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
+        } else if (comment.indexOf("deep blue")!= -1) {
+            $('.content').css('background', 'linear-gradient(to bottom, rgba(0,0,200,50) 0%, rgba(0,0,150,25) 33%, rgba(0,0,100,10) 66%, rgba(0,0,50,0) 100%)');
         } else {
             $('.content').css('background', 'white');
-        if (comment.indexOf("the icy coldness of space")!= -1) {
-            $(',content').css('background', 'liner-gradient(to bottom, rgba(40,50,200,200) 30% rgba(40,50,150,225) 66% rgba(20,25,100,230) 100% rgba(0,5,50,255)');
-        }   
-        }
+        } 
         if (comment.indexOf("fire") != -1) {
             alert("Dexter, is that you?");
         } else if (comment.indexOf("wood") != -1) {
@@ -24,7 +23,7 @@ $(function () {
             $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
         } else if (comment.indexOf("deactivate") != -1 || comment.indexOf("disable") != -1) {
             alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
-        } else if (comments.indexOf("doctor disco") != -1) {
+        } else if (comment.indexOf("doctor disco") != -1) {
             alert("Achievement Get: \n I'm a robot, not a doctor \n(Type Doctor Disco)");
         } else if (comment.indexOf("defense") != -1) {
             alert("Ready to Rumble");
@@ -32,9 +31,7 @@ $(function () {
             alert("I know who you are, Peter Quill")
         } else if (comment.indexOf("infinity") != -1) {
             alert("Robots. Robots Everywhere")
-        } else if (comment.indexOf("to the moon")!= -1){
-            $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
-        }
+        } 
 
     })
 })

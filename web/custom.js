@@ -6,6 +6,9 @@ $(function () {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
         } else {
             $('.content').css('background', 'white');
+        if (comment.indexOf("the icy coldness of space")!= -1) {
+            $(',content').css('background', 'liner-gradient(to bottom, rgba(40,50,200,200) 30% rgba(40,50,150,225) 66% rgba(20,25,100,230) 100% rgba(0,5,50,255)');
+        }   
         }
         if (comment.indexOf("fire") != -1) {
             alert("Dexter, is that you?");
@@ -17,6 +20,8 @@ $(function () {
             $('img:nth(0)').attr('src', '/static/custom/watergame.png')
         } else if (comment.indexOf("swerve") != -1) {
             $('img:nth(0)').attr('src', '/static/custom/swerve.jpg')
+        } else if (comment.indexOf("to the moon")!= -1){
+            $('img:nth(0)').attr('src', '/static/custom/MOON.jpg')
         } else if (comment.indexOf("deactivate") != -1 || comment.indexOf("disable") != -1) {
             alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
         } else if (comments.indexOf("doctor disco") != -1) {
@@ -158,15 +163,6 @@ $(document).on('submit', 'form', function () {
         if (ball_rock_1 >= 4 || ball_rock_2 >= 4 || ball_rock_3 >= 4) {
             alert("Achievement Get: \nHighly Illogical... :)! \n(Put more balls than needed into a rocket.)");
         }
-
-    // Balls in cargoship
-    if (ball_cargo == 0) {
-        //alert("Achievement Get: \nThe one scene in the Magic School Bus season one episode one when the freckled " + 
-            //"red haired kid goes to the moon, takes off his helmet and cause his entire head to freeze and become an ice block. " +
-            //"While he's in the spaceship his head thaws but he catches a cold and the episode ends with him " + 
-            //"back on earth with a cold, blowing his nose next to a pile of used tissues \n(Pushed in 0 balls)");
-    }
-
     if (helping_robot_climb) {
         alert("Achievement Get: \nMake it so \n(Robot Aids Another to Climb)")
     }

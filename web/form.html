@@ -8,7 +8,7 @@
 <form method="post" id="scouting-form" autocomplete="off">
   {{ form.csrf_token }}
   <div class="row">
-    <img src="static/custom/deep_space.png" id="logo" width="200" class="pull-right"></img>
+    <img src="static/custom/deep_space.png" id="logo" width="200" class="pull-right" alt="Deep Space"></img>
     <div class="col-md-8 col-xs-8 text-right">
       {{ form.match_id }}
       {{ form.team_id }}
@@ -130,9 +130,5 @@
     </div>
   </div>
 
-
-  </div>
-
-  <!--corrosponsds to top div-->
 </form>
 {% endblock %}

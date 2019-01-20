@@ -4,7 +4,7 @@ $(function () {
         var comment = $('#comments').val().toLowerCase();
         if (comment.indexOf("rainbow") != -1) {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
-        } else if (comment.indexOf("deep blue")!= -1) {
+        } else if (comment.indexOf("space")!= -1) {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(0,0,200,50) 0%, rgba(0,0,150,25) 33%, rgba(0,0,100,10) 66%, rgba(0,0,50,0) 100%)');
         } else {
             $('.content').css('background', 'white');
@@ -99,17 +99,17 @@ $(document).on('submit', 'form', function () {
     */
     //hi
     if (team == 830) {
-        alert("Achievement Get: \nRodents of Unusual Size")
+        alert("Achievement Get: \nRodents of Unusual Size \n(Scout the Ratpack!)")
     }
     if (hatch_total >= 6) {
-        alert("Achievement Get: \nOpen Pod Bay Doors")
+        alert("Achievement Get: \nOpen Pod Bay Doors \n(Score 6 Hatches or more!)")
     }
     if (cargo_total > 6) {
-        alert("Achievement Get: \nKesse Run in 12 Parasecs")
+        alert("Achievement Get: \nKessel Run in 12 Parasecs \n(Score 6 Cargo or more!)")
     }
     //utterly useless comment
     if (match_elements_total < 3) {
-        alert("Achievement Get: \nNo sign of Intelligent Life")
+        alert("Achievement Get: \nNo sign of Intelligent Life \n(Score less than 3 game pieces)")
     }
     // Comment Based
     if (comments.length > 110) {
@@ -126,7 +126,7 @@ $(document).on('submit', 'form', function () {
     }
     // Team Number
     if (team == 3322) {
-        alert("Acheivement Get: \n Not visible in skyline")
+        alert("Acheivement Get: \n Not visible in skyline \n(Scout the Skyline Robotic's Team!)")
     }
 
     // Fouls
@@ -151,7 +151,7 @@ $(document).on('submit', 'form', function () {
 
     //useless commet
     if (!cross_line) {
-        alert("Achievement Get: \nI'm sorry Dave, I'm afraid I can't do that")
+        alert("Achievement Get: \nI'm sorry Dave, I'm afraid I can't do that \n (Cross the line durring Sandstorm!)")
     }
 
     // Balls in a rocket
@@ -165,7 +165,7 @@ $(document).on('submit', 'form', function () {
     }
     // Hatches in a rocket
     if (hatch_rock_1 >= 2 && hatch_rock_2 >= 2 && hatch_rock_3 >= 2) {
-        alert("Achievement Get: \nI'm Givin' Her All She's Got, Captain! \n(Place 6 hatches on a rocket");
+        alert("Achievement Get: \nI'm Givin' Her All She's Got, Captain! \n(Place 6 hatches on a rocket)");
     }
 
     if (hatch_rocket_total >= 1 && ball_rocket_total == 0) {

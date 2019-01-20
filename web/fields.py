@@ -24,8 +24,8 @@ class Form(flask_wtf.Form):
     auton_ci_pick_ball_cargo = BallField('Pre-game Picked Ball In Cargo')
     auton_ci_pick_hatch_cargo = HatchField('Pre-game Picke Hatch On Cargo')  
 
-    auton_ci_ball_cargo = BallField('Placed Ball In Cargo')
-    auton_ci_hatch_cargo = HatchField('Placed Hatch On Cargo')
+    auton_ci_ball_cargo = IntegerField('Balls placed in Cargo Ship')
+    auton_ci_hatch_cargo = IntegerField('Hatches placed in Cargo Ship')
 
     auton_ci_ball_rock_1 = IntegerField('Ball Rocket Level 1', default=0, col_sm=8)
     auton_ci_ball_rock_2 = IntegerField('Ball Rocket Level 2', default=0, col_sm=8)

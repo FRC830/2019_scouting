@@ -41,8 +41,8 @@ class Form(flask_wtf.Form):
     # Teleop
     ball_count = IntegerField('Balls picked up', default=0, col_sm=6)
 
-    ball_cargo = IntegerField('Ball In Cargo', default=0, col_sm=6)
-    hatch_cargo = IntegerField('Hatch In Cargo', default=0, col_sm=6)
+    ball_cargo = IntegerField('Ball In Cargo Ship', default=0, col_sm=6)
+    hatch_cargo = IntegerField('Hatch In Cargo Ship', default=0, col_sm=6)
 
     ball_rock_1 = IntegerField('Ball Rocket Level 1', default=0, col_sm=8)
     ball_rock_2 = IntegerField('Ball Rocket Level 2', default=0, col_sm=8)

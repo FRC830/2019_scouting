@@ -2,3 +2,7 @@
 body.dark {
     color:white;
 }
+
+body.sun{
+background: radial-gradient(rgba(255,251,190,1),rgba(240,238,79,1),rgba(255,248,0,1))
+}

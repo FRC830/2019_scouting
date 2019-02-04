@@ -6,12 +6,14 @@ $(function () {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
         } else if (comment.indexOf("space")!= -1) {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(0,0,0,100) 0%, rgba(0,25,50,150) 33%, rgba(0,50,75,175) 66%, rgba(0,75,100,200) 100%)');
-            $('body').addClass('dark')
-        } 
-          else if (comment.indexOf("sun")!= -1)  {
-            $('.content').css('background','radial-gradient((75, 50, 5, 90, 60, 100), rgba(0,0,100,0) 0%, rgba(0,0,150,0) 50%, rgba(0,0,200,0) 100%)');
-         }
-          else {
+            $('body').addClass('dark');
+        } else if (comment.indexOf("sun")!= -1) {
+            $('.content').css('background', 'linear-gradient(to bottom, rgba(255,251,190,1) 0%, rgba(255,251,190,1) 33%, rgba(255,251,190,1)66%, rgba(255,251,190,1) 100%)');
+            $('.body').addClass('sun');
+
+            
+        } else {
+            console.log("chaning back")
             $('.content').css('background', 'white');
             $('body').removeClass('dark');
 

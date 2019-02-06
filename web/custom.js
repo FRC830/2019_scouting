@@ -8,12 +8,11 @@ $(function () {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(0,0,0,100) 0%, rgba(0,25,50,150) 33%, rgba(0,50,75,175) 66%, rgba(0,75,100,200) 100%)');
             $('body').addClass('dark');
         } else if (comment.indexOf("sun")!= -1) {
-            $('.content').css('background', 'linear-gradient(to bottom, rgba(255,251,190,1) 0%, rgba(255,251,190,1) 33%, rgba(255,251,190,1)66%, rgba(255,251,190,1) 100%)');
+            $('.content').css('background', 'linear-gradient(to bottom, rgb(255,251,190) 0%, rgb(255,251,190) 33%, rgb(255,251,190)66%, rgb(255,251,190) 100%)');
             $('.body').addClass('sun');
 
-            
         } else {
-            console.log("chaning back")
+            console.log("chaning back");
             $('.content').css('background', 'white');
             $('body').removeClass('dark');
 

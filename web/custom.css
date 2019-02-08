@@ -3,6 +3,7 @@ body.dark {
     color:white;
 }
 
-body.sun{  /*background:rgb(255,248,0);*/
+body.sun{ 
+background:rgb(255,248,0)
 background: radial-gradient(circle,rgb(255,251,190) 0%,rgb(240,238,79) 35%,rgb(255,248,0)100%) ;
 }

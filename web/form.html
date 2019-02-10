@@ -40,9 +40,12 @@
       </div>
       {{form.auton_ci_ball_cargo}}
       {{form.auton_ci_hatch_cargo}}
-      {{form.auton_ball_count}}
       </div>
 
+    <div class="row">
+      {{form.auton_ball_count}}
+      {{form.hatch_count}}
+    </div>
     <div class="row">
       {{form.auton_ci_ball_rock_1}}
       {{form.auton_ci_ball_rock_2}}
@@ -60,10 +63,19 @@
     <!--Teleop Forms-->
 
     <h2>Teleop</h2>
-
-    <h4 style="text-align: left;">Cargo</h4>
+    
+    <h4 style="text-align: left;">General</h4>
     <div class="row">
       {{form.ball_count}}
+      {{form.hatch_count}}
+    </div>
+    <div class="row">
+        {{form.ball_dropped}}
+        {{form.hatch_dropped}}
+    </div>
+    
+    <h4 style="text-align: left;">Cargo Ship</h4>
+    <div class="row">
       {{form.ball_cargo}}
       {{form.hatch_cargo}}
     </div>
@@ -79,11 +91,6 @@
       {{form.hatch_rock_1}}
       {{form.hatch_rock_2}}
       {{form.hatch_rock_3}}
-    </div>
-    <h4 style="text-align: left;">General</h4>
-    <div class="row">
-      {{form.ball_dropped}}
-      {{form.hatch_dropped}}
     </div>
     <div class="row">
       {{form.fouls}}

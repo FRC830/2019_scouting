@@ -4,17 +4,18 @@ $(function () {
         var comment = $('#comments').val().toLowerCase();
         if (comment.indexOf("rainbow") != -1) {
             $('.content').css('background', 'linear-gradient(to bottom, rgba(255,44,40,1) 0%,rgba(255,128,0,1) 17%,rgba(255,246,0,1) 34%,rgba(0,170,0,1) 50%,rgba(0,219,201,1) 66%,rgba(43,0,216,1) 83%,rgba(165,46,121,1) 100%)');
+            $('body').addClass('rainbow');
         } else if (comment.indexOf("space")!= -1) {
-            $('.content').css('background', 'linear-gradient(to bottom, rgba(0,0,0,100) 0%, rgba(0,25,50,150) 33%, rgba(0,50,75,175) 66%, rgba(0,75,100,200) 100%)');
+            $('.content').css('background', 'linear-gradient(to bottom, rgba(0,0,0,100) 0%, rgba(0,0,0,100) 25%, rgba(0,25,50,150) 50%, rgba(0,50,75,175) 66%, rgba(0,75,100,200) 100%)');
             $('body').addClass('dark');
         } else if (comment.indexOf("sun")!= -1) {
-            $('.content').css('background', 'linear-gradient(to bottom, rgb(255,251,190) 0%, rgb(255,251,190) 33%, rgb(255,251,190)66%, rgb(255,251,190) 100%)');
-            $('.body').addClass('sun');
-
+            $('.content').css('background', 'linear-gradient(to bottom, rgba(240,238,79,1) 0%, rgba(240,238,79,1) 50%, rgba(240,238,79,1)100%');
+            $('body').addClass('sun');
         } else {
-            console.log("chaning back");
             $('.content').css('background', 'white');
-            $('body').removeClass('dark');
+            $('body').removeClass('dark ');
+            $('body').removeClass('sun ');
+            $('body').removeClass('rainbow ');
 
         } 
         if (comment.indexOf("fire") != -1) {
@@ -126,11 +127,11 @@ $(document).on('submit', 'form', function () {
 
     // Match Number
     if (match == 1) {
-        alert("Achievement Get: \nWe are Number One! \n(scout the first match)");
+        alert("Achievement Get: \nWe are Number One! \n(Scout the first match)");
     } else if (match == 80) {
-        alert("Achievement Get: \nOur Princess is in Another Castle! \n(reach the end of the competition)")
+        alert("Achievement Get: \nOur Princess is in Another Castle! \n(Reach the end of the competition)")
     } else if (match >= 81) {
-        alert("Achievement Get: \nTake the Red Pill. \n(break the matrix by scouting past match 80)");
+        alert("Achievement Get: \nTake the Red Pill. \n(Break the matrix by scouting past match 80)");
     }
     // Team Number
     if (team == 3322) {
@@ -139,9 +140,9 @@ $(document).on('submit', 'form', function () {
 
     // Fouls
     if (fouls == 0 && techFouls == 0) {
-        alert("Achievement Get: \nGracious Profesionalism! \n(commit no fouls or tech fouls in a match)");
+        alert("Achievement Get: \nGracious Profesionalism! \n(Commit no fouls or tech fouls in a match)");
     } else if (techFouls >= 2) {
-        alert("Achievement Get: \nSet phasers to stun!\n(get two or more tech fouls)");
+        alert("Achievement Get: \nSet phasers to stun!\n(Get two or more tech fouls)");
     }
 
     // Habitat Starting Positions

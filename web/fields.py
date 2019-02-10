@@ -21,11 +21,11 @@ class Form(flask_wtf.Form):
         choices =[('0', 'Level 1'), ('1', 'Level 2'), ('2', 'Level 3')], default="0")
     auton_cross_line = CheckboxButtonField('Did the Robot cross the line?')
 
-    auton_ci_pick_ball_cargo = BallField('Pre-game placed Cargo In Cargo Ship')
-    auton_ci_pick_hatch_cargo = HatchField('Pre-game placed Hatch Panels On Cargo Ship')  
+    auton_ci_pick_ball_cargo = BallField('Pre-game Placed Cargo In Cargo Ship')
+    auton_ci_pick_hatch_cargo = HatchField('Pre-game Placed Hatch Panels On Cargo Ship')  
 
-    auton_ci_ball_cargo = IntegerField('Cargo placed In Cargo Ship',default=0)
-    auton_ci_hatch_cargo = IntegerField('Hatch Panels placed in Cargo Ship',default=0)
+    auton_ci_ball_cargo = IntegerField('Cargo Placed In Cargo Ship',default=0)
+    auton_ci_hatch_cargo = IntegerField('Hatch Panels Placed In Cargo Ship',default=0)
 
     auton_ci_ball_rock_1 = IntegerField('Cargo  Rocket Level 1', default=0, col_sm=8)
     auton_ci_ball_rock_2 = IntegerField('Cargo  Rocket Level 2', default=0, col_sm=8)
@@ -38,23 +38,23 @@ class Form(flask_wtf.Form):
     auton_ball_count= IntegerField('Cargo Picked Up',default=0)
     
     # Teleop
-    ball_count = IntegerField('Cargo picked up', default=0, col_sm=6)
+    ball_count = IntegerField('Cargo Picked Up', default=0, col_sm=6)
     hatch_count = IntegerField('Hatch Panels Picked Up', default=0, col_sm=6)
     ball_cargo = IntegerField('Cargo In Cargo Ship', default=0, col_sm=6)
     hatch_cargo = IntegerField('Hatch Panels On Cargo Ship', default=0, col_sm=6)
 
-    ball_rock_1 = IntegerField('Cargo in Rocket Level 1', default=0, col_sm=8)
-    ball_rock_2 = IntegerField('Cargo in Rocket Level 2', default=0, col_sm=8)
-    ball_rock_3 = IntegerField('Cargo in Rocket Level 3', default=0, col_sm=8)
+    ball_rock_1 = IntegerField('Cargo In Rocket Level 1', default=0, col_sm=8)
+    ball_rock_2 = IntegerField('Cargo In Rocket Level 2', default=0, col_sm=8)
+    ball_rock_3 = IntegerField('Cargo In Rocket Level 3', default=0, col_sm=8)
 
-    hatch_rock_1 = IntegerField('Hatch Panels on Rocket Level 1', default=0, col_sm=8)
-    hatch_rock_2 = IntegerField('Hatch Panels on Rocket Level 2', default=0, col_sm=8)
-    hatch_rock_3 = IntegerField('Hatch Panels on Rocket Level 3', default=0, col_sm=8)
+    hatch_rock_1 = IntegerField('Hatch Panels On Rocket Level 1', default=0, col_sm=8)
+    hatch_rock_2 = IntegerField('Hatch Panels On Rocket Level 2', default=0, col_sm=8)
+    hatch_rock_3 = IntegerField('Hatch Panels On Rocket Level 3', default=0, col_sm=8)
 
     ball_dropped = IntegerField('Cargo Dropped', default=0, col_sm=4)
     hatch_dropped = IntegerField('Hatch Panels Dropped', default=0, col_sm=4)
     
-    hatch_pickup = CheckboxButtonField('Robot Can Retrieve Hatch Panels, Cargo from Ground', col_sm=4)
+    hatch_pickup = CheckboxButtonField('Robot Can Retrieve Hatch Panels Or Cargo From Ground', col_sm=4)
     # comments = TextAreaField('', col_lg=12)
 
 
@@ -63,7 +63,7 @@ class Form(flask_wtf.Form):
 
     helping_robot_climb = CheckboxButtonField('Robot Helped Another Robot Climb', col_md=3)
     comments = TextAreaField('', col_lg=12)
-    helping_robot_field= CheckboxButtonField('Robot Helped Another Robot Get Cargo, Hatch', col_sm=4)
+    helping_robot_field= CheckboxButtonField('Robot Helped Another Robot Get Cargo Or Hatch', col_sm=4)
     comments = TextAreaField('', col_lg=12)
 
 

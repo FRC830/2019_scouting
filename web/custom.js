@@ -159,7 +159,7 @@ $(document).on('submit', 'form', function () {
     }
 
     //useless commet
-    if (!cross_line) {
+    if (cross_line) {
         alert("Achievement Get: \nI'm sorry Dave, I'm afraid I can't do that \n (Cross the line durring Sandstorm!)")
     }
 

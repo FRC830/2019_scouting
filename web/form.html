@@ -27,7 +27,7 @@
   </div>
   <div class="game-period">
     <!--Sandstorm Forms-->
-    <h3>Sandstorm & Auton</h3>
+    <h2>Sandstorm & Auton</h2>
 
     <div class="row">
       {{form.auton_cross_line}}
@@ -35,22 +35,34 @@
 
     <div class="row">
       <div class="col-md-12 col-xs-12">
+          <h3 style="text-align: left;">General</h3>
         <h4>What habitat did the Robot score?</h4>
         {{form.hab_start_robot}}
       </div>
+    </div>
+    <div class="row">
+          {{form.auton_ball_count}}
+          {{form.hatch_count}}
+    </div>
+    <br>
+    <div class="row">
+          {{form.ball_dropped}}
+          {{form.hatch_dropped}}
+    </div>
+    
+      <h4 style="text-align: left;">Cargo Ship</h4>
+      <div class="row">
       {{form.auton_ci_ball_cargo}}
       {{form.auton_ci_hatch_cargo}}
       </div>
-
-    <div class="row">
-      {{form.auton_ball_count}}
-      {{form.hatch_count}}
-    </div>
+    <br>
+    <h4 style="text-align: left;">Rocket</h4>
     <div class="row">
       {{form.auton_ci_ball_rock_1}}
       {{form.auton_ci_ball_rock_2}}
       {{form.auton_ci_ball_rock_3}}
     </div>
+    <br>
     <div class="row">
       {{form.auton_ci_hatch_rock_1}}
       {{form.auton_ci_hatch_rock_2}}
@@ -69,6 +81,7 @@
       {{form.ball_count}}
       {{form.hatch_count}}
     </div>
+    <br>
     <div class="row">
         {{form.ball_dropped}}
         {{form.hatch_dropped}}
@@ -86,7 +99,7 @@
       {{form.ball_rock_2}}
       {{form.ball_rock_3}}
     </div>
-    
+    <br>
     <div class="row">
       {{form.hatch_rock_1}}
       {{form.hatch_rock_2}}
@@ -99,7 +112,11 @@
     <br>
     <div class="row">
       {{form.helping_robot_climb}}
+      </div>
+      <div class="row">
       {{form.hatch_pickup}}
+    </div>
+    <div class="row">
       {{form.helping_robot_field}}
     </div>
   </div>

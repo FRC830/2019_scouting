@@ -33,8 +33,8 @@ $(function () {
             alert("Achievement Get: \nYou Have Died of Dysentery :)! \n(have a robot become disabled)");
         } else if (comment.indexOf("doctor disco") != -1) {
             alert("Achievement Get: \n I'm a robot, not a doctor \n(Type Doctor Disco)");
-        } else if (comment.indexOf("defense") != -1) {
-            alert("Ready to Rumble");
+        //} else if (comment.indexOf("defense") != -1) {
+            //alert("Ready to Rumble");
         } else if (comment.indexOf("starlord") != -1) {
             alert("I know who you are, Peter Quill")
         } else if (comment.indexOf("infinity") != -1) {

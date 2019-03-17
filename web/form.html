@@ -10,116 +10,62 @@
   <div class="row">
     <img src="static/custom/deep_space.png" id="logo" width="200" class="pull-right" alt="Deep Space"></img>
     <div class="col-md-8 col-xs-8 text-right">
-      {{ form.match_id }}
       {{ form.team_id }}
     </div>
     <!--problem-->
-    <div class="col-md-6">
-      {% if conf.get('station', 'none').lower() == 'none' %}
-      <div id="alert" class="alert alert-warning">No player station selected; team ID completion is not available.
-        See {{link_to('config_form', 'Settings')}} to choose a station.</div>
-      {% else %}
-      <div><label>Player Station: {{conf.get('station', '?')}}</label></div>
-      <div><label>Event name: {{conf.get('event_name', '?')}}</label></div>
-      <div id="alert" class="alert" style="display: none;"></div>
-      {% endif %}
-    </div>
-  </div>
-  <div class="game-period">
-    <!--Sandstorm Forms-->
-    <h3>Sandstorm & Auton</h3>
-
-    <div class="row">
-      {{form.auton_cross_line}}
-    </div>
-
-    <div class="row">
-      <div class="col-md-12 col-xs-12">
-        <h4>What habitat did the Robot score?</h4>
-        {{form.hab_start_robot}}
-      </div>
-      {{form.auton_ci_ball_cargo}}
-      {{form.auton_ci_hatch_cargo}}
-      </div>
-
-    <div class="row">
-      {{form.auton_ball_count}}
-      {{form.hatch_count}}
-    </div>
-    <div class="row">
-      {{form.auton_ci_ball_rock_1}}
-      {{form.auton_ci_ball_rock_2}}
-      {{form.auton_ci_ball_rock_3}}
-    </div>
-    <div class="row">
-      {{form.auton_ci_hatch_rock_1}}
-      {{form.auton_ci_hatch_rock_2}}
-      {{form.auton_ci_hatch_rock_3}}
-    </div>
   </div>
 
+    <div class ="game-period">
+      <div class = "row">  
+        <h3>General Info</h3>
+      </div>
+      <div class="row">
+        <h5>What Mechansims Does the Robot Have?</h5>
+          {{form.mechanism_cargo}}
+          {{form.mechanism_hatches}}
+          {{form.mechanism_climbing}}
+      </div>
+      <br>
+    </div>
+
+    <div class = "game-period">
+      <div class = "row">
+        <h3>Scoring</h3>
+      </div>
+      
+      <div class ="row">
+        <h5>Where Can They Score Hatches?</h5>
+        {{form.rk_level_one}}
+        {{form.rk_level_two}}
+        {{form.rk_level_three}}
+        {{form.cs_level_one}}
+      </div>
+      
+      <br>
+
+      <div class ="row">
+        <h5>Where Can They Score Cargo?</h5>
+        {{form.rk_level_one}}
+        {{form.rk_level_two}}
+        {{form.rk_level_three}}
+        {{form.cs_level_one}}
+      </div>
+      <br>
+    </div>
+
   <div class="game-period">
+    <div class= "row">
+      <h3>Climbing</h3>
+    </div>
 
-    <!--Teleop Forms-->
-
-    <h2>Teleop</h2>
-    
-    <h4 style="text-align: left;">General</h4>
-    <div class="row">
-      {{form.ball_count}}
-      {{form.hatch_count}}
-    </div>
-    <div class="row">
-        {{form.ball_dropped}}
-        {{form.hatch_dropped}}
-    </div>
-    
-    <h4 style="text-align: left;">Cargo Ship</h4>
-    <div class="row">
-      {{form.ball_cargo}}
-      {{form.hatch_cargo}}
-    </div>
-    
-    <h4 style="text-align: left;">Rocket</h4>
-    <div class="row">
-      {{form.ball_rock_1}}
-      {{form.ball_rock_2}}
-      {{form.ball_rock_3}}
-    </div>
-    
-    <div class="row">
-      {{form.hatch_rock_1}}
-      {{form.hatch_rock_2}}
-      {{form.hatch_rock_3}}
-    </div>
-    <div class="row">
-      {{form.fouls}}
-      {{form.tech_fouls}}
-    </div>
-    <br>
-    <div class="row">
-      {{form.helping_robot_climb}}
-      {{form.hatch_pickup}}
-      {{form.helping_robot_field}}
+    <div class = "row">
+      <h5>Which Levels Can the Robot Climb?</h5>
+      {{form.cl_level_one}}
+      {{form.cl_level_two}}
+      {{form.cl_level_three}}
     </div>
   </div>
-
-  <div class="game-period">
-
-    <!--Add Checkbox and End Game-->
-    <div class="row">
-      <h3>End Game & Comments</h3>
-
-      <div class="col-md-4 col-xs-12">
-        <h4>What habitat did the Robot score?</h4>
-        {{form.hab_end_robot}}
-      </div>
-
-      <div class="col-md-4 col-xs-12">
-        <h4>What type of Robot was it?</h4>
-        {{form.mechanism_scr}}
-      </div>
-    </div>
+    
     <div class="row">
       <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
         <h3>Comments</h3>

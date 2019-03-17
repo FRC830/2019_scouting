@@ -17,6 +17,17 @@ class Form(flask_wtf.Form):
 
     # Sandstorm what are you doing come in here so i can talk to you
 
+    mechanism_cargo = CheckboxButtonField('Cargo')
+    mechanism_hatches = CheckboxButtonField('Hatches')
+    mechanism_climbing = CheckboxButtonField('Climbing')
+    cl_level_one = CheckboxButtonField('Level One')
+    cl_level_two =CheckboxButtonField('Level Two')
+    cl_level_three =CheckboxButtonField('Level Three')
+    rk_level_one = CheckboxButtonField('Rocket Level One')
+    rk_level_two =  CheckboxButtonField('Rocket Level Two')
+    rk_level_three = CheckboxButtonField('Rocket Level Three')
+    cs_level_one = CheckboxButtonField('Cargo Ship')
+
     hab_start_robot = RadioField('What Habitat did the robot start in?', 
         choices =[('0', 'Level 1'), ('1', 'Level 2'), ('2', 'Level 3')], default="0")
     auton_cross_line = CheckboxButtonField('Did the Robot cross the line?')

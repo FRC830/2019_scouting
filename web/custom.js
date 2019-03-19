@@ -95,7 +95,7 @@ $(document).on('submit', 'form', function () {
 
     // Team Number
     if (team == 3322) {
-        alert("Acheivement Get: \n Not visible in skyline \n(Scout the Skyline Robotics Team!)")
+        alert("Acheivement Get: \n Not visible in Skyline \n(Scout the Skyline Robotics Team!)")
     }
 
 });
